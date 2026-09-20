@@ -1,0 +1,50 @@
+pyproject.toml
+  s_555bc32b7922f6::t_1ad76ca31380c3 107-109,162
+adapters/realman/pyproject.toml
+  s_555bc32b7922f6::t_1ad76ca31380c3 1-35
+adapters/realman/src/quackd_realman/upstream_api.py
+  s_555bc32b7922f6::t_1ad76ca31380c3 1-7,9-84
+  s_555bc32b7922f6::t_459a385272a658 8
+adapters/realman/README.md
+  s_555bc32b7922f6::t_1ad76ca31380c3 1-15
+adapters/realman/src/quackd_realman/mock.py
+  s_555bc32b7922f6::t_1ad76ca31380c3 1-114
+adapters/realman/src/quackd_realman/verbs.py
+  s_555bc32b7922f6::t_1ad76ca31380c3 1-18,22-84
+  s_555bc32b7922f6::t_ef9ca827360739 19-21
+docs/adapters/realman.md
+  s_555bc32b7922f6::t_459a385272a658 5
+  s_555bc32b7922f6::t_1ad76ca31380c3 1-4,6-47
+adapters/realman/src/quackd_realman/real.py
+  s_555bc32b7922f6::t_64c1bc700f7819 107,109
+  s_555bc32b7922f6::t_ef9ca827360739 132-133,148-150,253-254
+  s_555bc32b7922f6::t_1ad76ca31380c3 1-106,108,110-131,134-147,151-252,255-298,301-324
+  s_555bc32b7922f6::t_989b778bf8dc2f 299-300
+adapters/realman/src/quackd_realman/__init__.py
+  s_555bc32b7922f6::t_ef9ca827360739 70-72,95-97,247-249
+  s_555bc32b7922f6::t_989b778bf8dc2f 25-32,94
+  s_555bc32b7922f6::t_674756f795a572 196
+  s_555bc32b7922f6::t_1ad76ca31380c3 1-24,33-69,73-93,98-195,197-246,250-263
+adapters/realman/tests/test_realman_adapter.py
+  s_555bc32b7922f6::t_864b3939b87f05 6
+  s_555bc32b7922f6::t_ed7029b855b6a0 1-3,7-8,10-39,109
+  s_555bc32b7922f6::t_af1fa79d041936 4-5,9,40-108
+uv.lock
+  s_555bc32b7922f6::t_4d3e275aa34a82 30,3632-3634,3703,3721,3795-3813,3899-3907
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "eb51d0464744c9b5124ef18978c479c2ee8d920d",
+  "prompts": {},
+  "sessions": {
+    "s_555bc32b7922f6": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0bcff-d27b-76d3-b0cd-a38d4afe81f6",
+        "model": "gpt-5.6-luna"
+      },
+      "human_author": "TentacleCat <131333217+TentacleCat@users.noreply.github.com>"
+    }
+  }
+}
