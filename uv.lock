@@ -27,6 +27,7 @@ members = [
     "quackd-lerobot",
     "quackd-microduck",
     "quackd-open-duck",
+    "quackd-realman",
     "quackd-rosbridge",
     "quackd-toddlerbot",
     "quackd-xlerobot",
@@ -3628,6 +3629,9 @@ openai = [
 qwen = [
     { name = "openai" },
 ]
+realman = [
+    { name = "quackd-realman" },
+]
 robots = [
     { name = "quackd-alohamini" },
     { name = "quackd-lerobot", extra = ["sdk"] },
@@ -3696,6 +3700,7 @@ requires-dist = [
     { name = "quackd-open-duck", marker = "extra == 'dev'", editable = "adapters/open_duck" },
     { name = "quackd-open-duck", marker = "extra == 'open-duck'", editable = "adapters/open_duck" },
     { name = "quackd-open-duck", marker = "extra == 'robots'", editable = "adapters/open_duck" },
+    { name = "quackd-realman", marker = "extra == 'realman'", editable = "adapters/realman" },
     { name = "quackd-rosbridge", marker = "extra == 'dev'", editable = "adapters/rosbridge" },
     { name = "quackd-rosbridge", extras = ["sdk"], marker = "extra == 'robots'", editable = "adapters/rosbridge" },
     { name = "quackd-rosbridge", extras = ["sdk"], marker = "extra == 'rosbridge'", editable = "adapters/rosbridge" },
@@ -3713,7 +3718,7 @@ requires-dist = [
     { name = "ultralytics", marker = "extra == 'yolo'", specifier = ">=8.2" },
     { name = "zeroconf", marker = "extra == 'lan'", specifier = ">=0.132" },
 ]
-provides-extras = ["all", "alohamini", "anthropic", "cohere", "deepseek", "dev", "gemini", "glm", "grok", "jev", "kimi", "lan", "lerobot", "live", "meta", "microduck", "microduck-camera", "mistral", "mujoco", "open-duck", "openai", "qwen", "robots", "rosbridge", "toddlerbot", "xlerobot", "yolo"]
+provides-extras = ["all", "alohamini", "anthropic", "cohere", "deepseek", "dev", "gemini", "glm", "grok", "jev", "kimi", "lan", "lerobot", "live", "meta", "microduck", "microduck-camera", "mistral", "mujoco", "open-duck", "openai", "qwen", "realman", "robots", "rosbridge", "toddlerbot", "xlerobot", "yolo"]
 
 [[package]]
 name = "quackd-alohamini"
@@ -3786,6 +3791,25 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [{ name = "quackd", editable = "." }]
+
+[[package]]
+name = "quackd-realman"
+source = { editable = "adapters/realman" }
+dependencies = [
+    { name = "quackd" },
+]
+
+[package.optional-dependencies]
+sdk = [
+    { name = "robotic-arm" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "quackd", editable = "." },
+    { name = "robotic-arm", marker = "extra == 'sdk'", specifier = ">=1.1.6" },
+]
+provides-extras = ["sdk"]
 
 [[package]]
 name = "quackd-rosbridge"
@@ -3870,6 +3894,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/c0/8f/0722ca900cc807c13a6a0c696dacf35430f72e0ec571c4275d2371fca3e9/rich-15.0.0.tar.gz", hash = "sha256:edd07a4824c6b40189fb7ac9bc4c52536e9780fbbfbddf6f1e2502c31b068c36", size = 230680, upload-time = "2026-04-12T08:24:00.75Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/82/3b/64d4899d73f91ba49a8c18a8ff3f0ea8f1c1d75481760df8c68ef5235bf5/rich-15.0.0-py3-none-any.whl", hash = "sha256:33bd4ef74232fb73fe9279a257718407f169c09b78a87ad3d296f548e27de0bb", size = 310654, upload-time = "2026-04-12T08:24:02.83Z" },
+]
+
+[[package]]
+name = "robotic-arm"
+version = "1.1.6"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/1b/dc/95eac5fd2a20e25731b7410e687cda0edcda2cbac0025a926f8dc2999da7/robotic_arm-1.1.6.tar.gz", hash = "sha256:743db0f64f5e46d130ba096d0bb94b09664fc5deec53c7870d68c2bef47822bb", size = 2879153, upload-time = "2026-07-23T12:22:03.318Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a4/41/5ea5eb5c471e9aa55842eef04cf3b36d5d0ba00bf26637206c59550a676d/robotic_arm-1.1.6-py3-none-any.whl", hash = "sha256:c564f4809836382ce5d58fc6bfc28b0f21f7ebad9ca56038d4da952910cbedd3", size = 2896451, upload-time = "2026-07-23T12:21:58.404Z" },
 ]
 
 [[package]]

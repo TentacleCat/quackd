@@ -104,6 +104,9 @@ xlerobot = ["quackd-xlerobot>=0.10,<0.11"]
 alohamini = ["quackd-alohamini>=0.10,<0.11"]
 open_duck = ["quackd-open-duck>=0.10,<0.11"]
 toddlerbot = ["quackd-toddlerbot>=0.10,<0.11"]
+# RealMan's RM_API2 Python package is supplied by the vendor checkout; this extra installs the
+# adapter and keeps the SDK lazy so the mock remains usable on macOS and other unsupported hosts.
+realman = ["quackd-realman>=0.10,<0.11"]
 # The Microduck's camera reaches clients only as an H.264 WebRTC track from mediad — there is
 # no camera method in duck-ipc-proto and no snapshot endpoint — so a picture means being a
 # WebRTC peer. Heavy (aiortc pulls av, which pulls FFmpeg), needed by nobody who is not
@@ -156,6 +159,7 @@ quackd-open-duck = { workspace = true }
 quackd-xlerobot = { workspace = true }
 quackd-alohamini = { workspace = true }
 quackd-toddlerbot = { workspace = true }
+quackd-realman = { workspace = true }
 
 [tool.hatch.version]
 path = "quackd/__init__.py"
